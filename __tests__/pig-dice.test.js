@@ -51,4 +51,11 @@ describe('Player.prototype.tally', () => {
     newPlayer.tally(rollValue);
     expect(newPlayer.turnTotal).toEqual(4);
   });
+
+  test('It will zero out turnTotal if roll value is a 0', () => {
+    const newPlayer = new Player (0,6,0);
+    const rollValue = 0;
+    newPlayer.tally(rollValue);
+    expect(newPlayer.turnTotal).toEqual(0);
+  });
 });
