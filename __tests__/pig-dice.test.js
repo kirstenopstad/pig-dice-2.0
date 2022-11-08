@@ -1,4 +1,4 @@
-import { rollDi, rollResult } from './../src/js/pig-dice.js';
+import { rollDi, rollResult, Player } from './../src/js/pig-dice.js';
 
 describe('rollDi', () => {
 
@@ -23,5 +23,13 @@ describe('rollResult', () => {
     expect(rollResult(6)).toEqual(6);
   });
 
+  describe('Player', () => {
+
+    test('It will create an object with the keys, score, total, & turn total', () => {
+      const newPlayer = new Player(0,0);
+      expect(newPlayer.scoreTotal).toEqual(0);
+      expect(newPlayer.turnTotal).toEqual(0);
+    });
+  });
 })
 
