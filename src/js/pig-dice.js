@@ -42,3 +42,9 @@ export function LeaderBoard() {
 LeaderBoard.prototype.addPlayer = function (player) {
   this.players[player.id] = player;
 }
+
+LeaderBoard.prototype.switchPlayer = function () {
+  if (this.turnId === 1) {
+    this.turnId = 2 
+  }
+}
