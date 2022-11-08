@@ -46,5 +46,7 @@ LeaderBoard.prototype.addPlayer = function (player) {
 LeaderBoard.prototype.switchPlayer = function () {
   if (this.turnId === 1) {
     this.turnId = 2 
+  } else {
+    this.turnId = 1
   }
 }
