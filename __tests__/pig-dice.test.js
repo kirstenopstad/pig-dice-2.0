@@ -47,6 +47,12 @@ describe('Player', () => {
     newPlayer.turnTotal = 20;
     expect(newPlayer.checkWinner()).toEqual(true);
   });
+
+  test('It will return false if scoreTotal + turnTotal < 100+', () => {
+    newPlayer.scoreTotal = 79;
+    newPlayer.turnTotal = 20;
+    expect(newPlayer.checkWinner()).toEqual(true);
+  });
 });
 
 describe('Player.prototype.tally', () => {
