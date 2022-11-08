@@ -1,4 +1,4 @@
-import { rollDi, rollResult, Player } from './../src/js/pig-dice.js';
+import { rollDi, rollResult, Player, LeaderBoard } from './../src/js/pig-dice.js';
 
 describe('rollDi', () => {
 
@@ -73,9 +73,11 @@ describe('Player.prototype.hold', () => {
 
 describe('LeaderBoard', () => {
   let leaderBoard;
+  let newPlayer;
 
   beforeEach(() => {
     leaderBoard = new LeaderBoard();
+    newPlayer = new Player(0,0,0);
   });
 
   test('It will create a LeaderBoard object that contains players and turnId', () => {
@@ -83,4 +85,10 @@ describe('LeaderBoard', () => {
     expect(leaderBoard.turnId).toEqual(1);
   });
 
+  test('It will add a Player to players', () => {
+    leaderBoard.addPlayer(newPlayer);
+    expect(leaderBoard.players["0"]).toEqual({ scoreTotal: "0", turnTotal: "0",  id: "0" });
+  });
+
 });
+
