@@ -28,3 +28,8 @@ Player.prototype.tally = function (rollValue) {
     this.turnTotal = 0;
   }
 }
+
+Player.prototype.hold = function () {
+  this.scoreTotal += this.turnTotal;
+  this.turnTotal = 0;
+}
