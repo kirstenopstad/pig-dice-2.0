@@ -91,12 +91,20 @@ describe('LeaderBoard', () => {
   });
 
   test('It will change the turnId from 1 to 2', () => {
+    const newPlayer1 = new Player (0,3,1);
+    const newPlayer2 = new Player (0,6,2);
+    leaderBoard.addPlayer(newPlayer1);
+    leaderBoard.addPlayer(newPlayer2);
     leaderBoard.turnId = 1;
     leaderBoard.switchPlayer();
     expect(leaderBoard.turnId).toEqual(2);
   })
 
   test('It will change the turnId from 2 to 1', () => {
+    const newPlayer1 = new Player (0,3,1);
+    const newPlayer2 = new Player (0,6,2);
+    leaderBoard.addPlayer(newPlayer1);
+    leaderBoard.addPlayer(newPlayer2);
     leaderBoard.turnId = 2;
     leaderBoard.switchPlayer();
     expect(leaderBoard.turnId).toEqual(1);
@@ -108,8 +116,8 @@ describe('LeaderBoard', () => {
     leaderBoard.addPlayer(newPlayer1);
     leaderBoard.addPlayer(newPlayer2);
     leaderBoard.switchPlayer();
-    expect(leaderBoard.players[1].turnTotal).toEqual(0);
-    expect(leaderBoard.players[2].turnTotal).toEqual(0);
+    expect(leaderBoard.players["1"].turnTotal).toEqual(0);
+    expect(leaderBoard.players["2"].turnTotal).toEqual(0);
   })
 });
 
