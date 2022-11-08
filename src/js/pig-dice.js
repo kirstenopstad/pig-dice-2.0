@@ -15,7 +15,8 @@ export function rollResult(roll) {
   return rollValue;
 }
 
-export function Player(scoreTotal, turnTotal) {
+export function Player(scoreTotal, turnTotal, id) {
   this.scoreTotal = scoreTotal;
   this.turnTotal = turnTotal;
+  this.id = id;
 }
