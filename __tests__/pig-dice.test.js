@@ -22,14 +22,26 @@ describe('rollResult', () => {
     expect(rollResult(5)).toEqual(5);
     expect(rollResult(6)).toEqual(6);
   });
-
-  describe('Player', () => {
-
-    test('It will create an object with the keys, score, total, & turn total', () => {
-      const newPlayer = new Player(0,0);
-      expect(newPlayer.scoreTotal).toEqual(0);
-      expect(newPlayer.turnTotal).toEqual(0);
-    });
-  });
 })
+
+describe('Player', () => {
+  let newPlayer;
+    
+  beforeEach(() => {
+    newPlayer = new Player(0,0);
+  });
+
+  test('It will create an object with the keys, score, total, & turn total', () => {
+    expect(newPlayer.scoreTotal).toEqual(0);
+    expect(newPlayer.turnTotal).toEqual(0);
+  });
+
+  // test('It will create an object with the keys, score, total, & turn total and an id', () => {
+  //   const newPlayer = new Player(0,0,0);
+  //   expect(newPlayer.scoreTotal).toEqual(0);
+  //   expect(newPlayer.turnTotal).toEqual(0);
+  //   expect(newPlayer.id).toEqual(0);
+  // });
+});
+
 
