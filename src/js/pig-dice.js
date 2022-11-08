@@ -38,3 +38,7 @@ export function LeaderBoard() {
   this.players = {};
   this.turnId = 1;
 } 
+
+LeaderBoard.prototype.addPlayer = function (player) {
+  this.players[player.id] = player;
+}
