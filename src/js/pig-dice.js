@@ -24,7 +24,7 @@ export function Player(scoreTotal, turnTotal, id) {
 Player.prototype.tally = function (rollValue) {
   if (rollValue !== 0) {
     this.turnTotal += rollValue;
-  // } else {
-  //   this.turnTotal = 0;
+  } else {
+    this.turnTotal = 0;
   }
 }
