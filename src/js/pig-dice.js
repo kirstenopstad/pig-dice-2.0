@@ -9,9 +9,8 @@ export function rollResult(roll) {
   let rollValue;
   if (roll === 1){
     rollValue = 0;
-  } 
-  // else {
-  //   rollValue = roll;
-  // }
+  } else {
+    rollValue = roll;
+  }
   return rollValue;
 }
