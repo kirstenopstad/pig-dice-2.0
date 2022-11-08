@@ -28,7 +28,7 @@ describe('Player', () => {
   let newPlayer;
     
   beforeEach(() => {
-    newPlayer = new Player(0,0);
+    newPlayer = new Player(0,0,0);
   });
 
   test('It will create an object with the keys, score, total, & turn total', () => {
@@ -37,11 +37,18 @@ describe('Player', () => {
   });
 
   test('It will create an object with the keys, score, total, & turn total and an id', () => {
-    // newPlayer.id = 0;
     expect(newPlayer.scoreTotal).toEqual(0);
     expect(newPlayer.turnTotal).toEqual(0);
     expect(newPlayer.id).toEqual(0);
   });
 });
 
+describe('Player.prototype.tally', () => {
 
+  test('It will add roll result to turn total', () => {
+    const newPlayer = new Player (0,0,0);
+    const rollValue = 4;
+    newPlayer.tally(rollValue);
+    expect(newPlayer.turnTotal).toEqual(4);
+  });
+});
