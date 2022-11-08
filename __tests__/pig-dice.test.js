@@ -36,12 +36,12 @@ describe('Player', () => {
     expect(newPlayer.turnTotal).toEqual(0);
   });
 
-  // test('It will create an object with the keys, score, total, & turn total and an id', () => {
-  //   const newPlayer = new Player(0,0,0);
-  //   expect(newPlayer.scoreTotal).toEqual(0);
-  //   expect(newPlayer.turnTotal).toEqual(0);
-  //   expect(newPlayer.id).toEqual(0);
-  // });
+  test('It will create an object with the keys, score, total, & turn total and an id', () => {
+    // newPlayer.id = 0;
+    expect(newPlayer.scoreTotal).toEqual(0);
+    expect(newPlayer.turnTotal).toEqual(0);
+    expect(newPlayer.id).toEqual(0);
+  });
 });
 
 
