@@ -49,4 +49,6 @@ LeaderBoard.prototype.switchPlayer = function () {
   } else {
     this.turnId = 1
   }
+  this.players[1].turnTotal = 0
+  this.players[2].turnTotal = 0
 }
