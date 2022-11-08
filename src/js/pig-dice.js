@@ -4,3 +4,14 @@ export function rollDi() {
   const roll = Math.floor(Math.random() * (max - min) + (min));
   return roll;
 };
+
+export function rollResult(roll) {
+  let rollValue;
+  if (roll === 1){
+    rollValue = 0;
+  } 
+  // else {
+  //   rollValue = roll;
+  // }
+  return rollValue;
+}
