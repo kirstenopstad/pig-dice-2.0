@@ -101,5 +101,15 @@ describe('LeaderBoard', () => {
     leaderBoard.switchPlayer();
     expect(leaderBoard.turnId).toEqual(1);
   })
+
+  test('It will reset turnTotal to zero', () => {
+    const newPlayer1 = new Player (0,3,1);
+    const newPlayer2 = new Player (0,6,2);
+    leaderBoard.addPlayer(newPlayer1);
+    leaderBoard.addPlayer(newPlayer2);
+    leaderBoard.switchPlayer();
+    expect(leaderBoard.players[1].turnTotal).toEqual(0);
+    expect(leaderBoard.players[2].turnTotal).toEqual(0);
+  })
 });
 
