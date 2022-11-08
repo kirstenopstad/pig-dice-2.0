@@ -87,8 +87,13 @@ describe('LeaderBoard', () => {
 
   test('It will add a Player to players', () => {
     leaderBoard.addPlayer(newPlayer);
-    expect(leaderBoard.players["0"]).toEqual({ scoreTotal: "0", turnTotal: "0",  id: "0" });
+    expect(leaderBoard.players["0"]).toEqual({ scoreTotal: 0, turnTotal: 0,  id: 0 });
   });
 
+  test('It will change the turnId from 1 to 2', () => {
+    leaderBoard.turnId = 1;
+    leaderBoard.switchPlayer();
+    expect(leaderBoard.turnId).toEqual(2);
+  })
 });
 
