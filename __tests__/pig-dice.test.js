@@ -62,8 +62,25 @@ describe('Player.prototype.tally', () => {
 
 describe('Player.prototype.hold', () => {
 
-  test('It will set scoreTotal to value of turnTotal', () => {
-    const newPlayer = new Player (0,8,1);
-    expect(newPlayer.scoreTotal).toEqual(8);
+  test('It will add turnTotal to value of scoreTotal', () => {
+    const newPlayer = new Player (0,0,0);
+    newPlayer.scoreTotal = 2;
+    newPlayer.turnTotal = 8;
+    newPlayer.hold();
+    expect(newPlayer.scoreTotal).toEqual(10);
   })
 })
+
+describe('LeaderBoard', () => {
+  let leaderBoard;
+
+  beforeEach(() => {
+    leaderBoard = new LeaderBoard();
+  });
+
+  test('It will create a LeaderBoard object that contains players and turnId', () => {
+    expect(leaderBoard.players).toEqual({});
+    expect(leaderBoard.turnId).toEqual(1);
+  });
+
+});
