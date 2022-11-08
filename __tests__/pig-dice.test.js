@@ -59,3 +59,11 @@ describe('Player.prototype.tally', () => {
     expect(newPlayer.turnTotal).toEqual(0);
   });
 });
+
+describe('Player.prototype.hold', () => {
+
+  test('It will set scoreTotal to value of turnTotal', () => {
+    const newPlayer = new Player (0,8,1);
+    expect(newPlayer.scoreTotal).toEqual(8);
+  })
+})
