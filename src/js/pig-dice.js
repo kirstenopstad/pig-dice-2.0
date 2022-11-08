@@ -14,3 +14,8 @@ export function rollResult(roll) {
   }
   return rollValue;
 }
+
+export function Player(scoreTotal, turnTotal) {
+  this.scoreTotal = scoreTotal;
+  this.turnTotal = turnTotal;
+}
