@@ -95,5 +95,11 @@ describe('LeaderBoard', () => {
     leaderBoard.switchPlayer();
     expect(leaderBoard.turnId).toEqual(2);
   })
+
+  test('It will change the turnId from 2 to 1', () => {
+    leaderBoard.turnId = 2;
+    leaderBoard.switchPlayer();
+    expect(leaderBoard.turnId).toEqual(1);
+  })
 });
 
