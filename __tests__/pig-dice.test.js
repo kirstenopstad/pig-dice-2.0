@@ -51,7 +51,7 @@ describe('Player', () => {
   test('It will return false if scoreTotal + turnTotal < 100+', () => {
     newPlayer.scoreTotal = 79;
     newPlayer.turnTotal = 20;
-    expect(newPlayer.checkWinner()).toEqual(true);
+    expect(newPlayer.checkWinner()).toEqual(false);
   });
 });
 
@@ -133,3 +133,15 @@ describe('LeaderBoard', () => {
   })
 });
 
+describe('startGame', () => {
+
+  test('It will add playerOne and playerTwo and set turnId to 1 to leaderboard', () => {
+    let leaderboard = new LeaderBoard();
+    let playerOne = new Player (0,0,1)
+    let playerTwo = new Player (0,0,2)
+    leaderboard.addPlayer(playerOne);
+    leaderboard.addPlayer(playerTwo);
+    leaderboard.turnId = 1;
+    expect(leaderboard).toMatchObject({"1":{ scoreTotal: 0, turnTotal: 0,  id: 1 }, "2": { scoreTotal: 0, turnTotal: 0,  id: 2 }});
+  });
+});
