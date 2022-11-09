@@ -37,6 +37,8 @@ Player.prototype.hold = function () {
 Player.prototype.checkWinner = function () {
   if ((this.scoreTotal + this.turnTotal) >= 100) {
     return true
+  } else {
+    return false
   }
 };
 
